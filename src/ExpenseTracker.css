@@ -1,0 +1,238 @@
+.expense-tracker {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+.dashboard {
+    display: flex;
+    gap: 15px; /* Reduced gap */
+    margin-bottom: 15px; /* Reduced margin */
+    justify-content: center; /* Center the items */
+    max-width: 800px; /* Limit width */
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center; /* Align items to reduce height */
+    padding: 10px 0; /* Reduce padding */
+    min-height: 150px; /* Limit the height */
+  }
+  
+  
+.action-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.action-box {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.income-box {
+  background-color: #f0f9f0;
+  border-left: 4px solid #4CAF50;
+}
+
+.expense-box {
+  background-color: #fff0f0;
+  border-left: 4px solid #F44336;
+}
+
+.balance-display, .expense-display {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.action-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.income-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.expense-button {
+  background-color: #F44336;
+  color: white;
+}
+
+.chart-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.transactions-section {
+  margin-top: 30px;
+}
+
+.transactions-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.recent-transactions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recent-transactions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-transactions li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.recent-transactions li.income {
+  color: #4CAF50;
+}
+
+.recent-transactions li.expense {
+  color: #F44336;
+}
+
+.recent-transactions .description {
+  flex: 2;
+}
+
+.recent-transactions .amount {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}
+
+.recent-transactions .date {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.category-tag {
+  background: #eee;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.top-expenses {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.expenses-chart {
+  margin-top: 15px;
+}
+
+.expenses-list {
+  margin-top: 15px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.form-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    text-align: center;
+  }
+  
+  .form-modal h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .form-modal input,
+  .form-modal select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-modal input:focus,
+  .form-modal select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .form-actions button:first-child {
+    background: #007bff;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .form-actions button:first-child:hover {
+    background: #0056b3;
+  }
+  
+  .form-actions button:last-child {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .form-actions button:last-child:hover {
+    background: #a71d2a;
+  }
+  
