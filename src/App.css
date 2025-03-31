@@ -1,8 +1,12 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;  /* Ensures it takes the full width */
+  max-width: 100%;  /* Removes the 1280px limit */
+  height: 100vh;  /* Ensures full viewport height */
+  margin: 0;
+  padding: 2rem;  /* Keep padding as needed */
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
