@@ -3,10 +3,11 @@
   max-width: 100%;  /* Removes the 1280px limit */
   height: 100vh;  /* Ensures full viewport height */
   margin: 0;
-  padding: 2rem;  /* Keep padding as needed */
   text-align: center;
   display: flex;
   flex-direction: column;
+  background-color: #2d3748;
+
 }
 
 .logo {

@@ -10,7 +10,7 @@
   max-width: 1200px;
   margin: 0 auto;
   margin: 0;
-  padding: 20px;
+  padding: 7px;
   color: #333;
   min-height: calc(100vh - 40px);
 
@@ -21,14 +21,18 @@
   color: white;
   margin-bottom: 30px;
   font-size:185%;
+  margin-left: 10px;
 }
 
 .dashboard {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  gap: 20px;
+  gap: 20px; /* Adds spacing between boxes */
+  padding: 20px;
+  background-color: #262d3a;
+  border-radius: 15px;
+  align-items: stretch; /* Ensures all boxes have the same height */
 }
+
 
 .action-section {
   flex: 1;
@@ -38,6 +42,7 @@
 }
 
 .action-box {
+  flex: 1;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -75,11 +80,11 @@
 }
 
 .chart-section {
-  flex: 1;
-  background-color: #f8f9fa;
+  flex: 2; /* Makes the Expense Distribution box larger */
   padding: 20px;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .chart-title {

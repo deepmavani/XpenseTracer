@@ -163,57 +163,58 @@ const ExpenseTracker = () => {
       <h1 className="expense-tracker-title">Expense Tracker</h1>
       
       <div className="dashboard">
-        <div className="action-section">
-          <div className="action-box wallet-box">
-            <h3>Wallet Balance</h3>
-            <div className="balance-display">₹{balance.toLocaleString()}</div>
-            <button 
-              onClick={() => setShowIncomeForm(true)} 
-              className="action-button income-button"
-            >
-              + Add Income
-            </button>
-          </div>
+  <div className="action-section">
+    <div className="action-box wallet-box">
+      <h3>Wallet Balance</h3>
+      <div className="balance-display">₹{balance.toLocaleString()}</div>
+      <button 
+        onClick={() => setShowIncomeForm(true)} 
+        className="action-button income-button"
+      >
+        + Add Income
+      </button>
+    </div>
 
-          <div className="action-box expenses-box">
-            <h3>Expenses</h3>
-            <div className="expense-display">₹{expenses.reduce((sum, exp) => sum + exp.price, 0).toLocaleString()}</div>
-            <button 
-              onClick={() => {
-                setEditExpense(null);
-                setShowExpenseForm(true);
-              }} 
-              className="action-button expense-button"
-            >
-              + Add Expense
-            </button>
-          </div>
-        </div>
+    <div className="action-box expenses-box">
+      <h3>Expenses</h3>
+      <div className="expense-display">₹{expenses.reduce((sum, exp) => sum + exp.price, 0).toLocaleString()}</div>
+      <button 
+        onClick={() => {
+          setEditExpense(null);
+          setShowExpenseForm(true);
+        }} 
+        className="action-button expense-button"
+      >
+        + Add Expense
+      </button>
+    </div>
+  </div>
 
-        <div className="chart-section">
-          <h3 className="chart-title">Expense Distribution</h3>
-          <div className="pie-chart-container">
-            <PieChart width={300} height={250}>
-              <Pie
-                data={pieData}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                {pieData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend />
-            </PieChart>
-          </div>
-        </div>
-      </div>
+  <div className="chart-section">
+    <h3 className="chart-title">Expense Distribution</h3>
+    <div className="pie-chart-container">
+      <PieChart width={300} height={250}>
+        <Pie
+          data={pieData}
+          cx="50%"
+          cy="50%"
+          labelLine={false}
+          outerRadius={80}
+          fill="#8884d8"
+          dataKey="value"
+          label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+        >
+          {pieData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+        <Tooltip />
+        <Legend />
+      </PieChart>
+    </div>
+  </div>
+</div>
+
 
       {showIncomeForm && (
         <div className="modal-overlay">
